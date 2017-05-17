@@ -12,13 +12,17 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
+import RssForm from '../../components/RssForm';
 
-export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
-  render() {
-    return (
+const HomePage = (props) => {
+  return (
+    <div>
       <h1>
-        <FormattedMessage {...messages.header} />
+        Enter the URL for a valid RSS feed.
       </h1>
-    );
-  }
-}
+      <RssForm />
+    </div>
+  );
+};
+
+export default HomePage;
